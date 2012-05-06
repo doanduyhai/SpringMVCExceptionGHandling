@@ -1,4 +1,4 @@
-AjaxSessionExpiration Demo
+Spring MVC Exception Handling Demo
 ================
 
 Presentation
