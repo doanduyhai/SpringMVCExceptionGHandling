@@ -1,0 +1,46 @@
+.center
+{
+	text-align: center !important;
+}
+
+.floatRight
+{
+	float: right;	
+}
+
+.right
+{
+	text-align: right;	
+}
+
+.left
+{
+	text-align: left;	
+}
+
+.middle
+{
+	vertical-align: middle;
+}
+
+.fullHeight
+{
+	height: 100%;	
+}
+
+.strong
+{
+	folt-weight: bold;	
+}
+.red
+{
+	color: red;
+}
+.noMargin
+{
+	margin: 0px !important;	
+}
+.noPadding
+{
+	padding: 0px !important;
+}

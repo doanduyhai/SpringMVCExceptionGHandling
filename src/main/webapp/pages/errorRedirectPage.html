@@ -1,0 +1,25 @@
+<!DOCTYPE html>
+<html xmlns="http://www.w3.org/1999/xhtml" 
+	  xmlns:th="http://www.thymeleaf.org">
+<head>
+	<link rel="stylesheet" href="../assets/css/bootstrap.css" th:href="@{/assets/css/bootstrap.css}" />
+	<link rel="stylesheet" href="../assets/css/springmvcexceptionhandling.css" th:href="@{/assets/css/springmvcexceptionhandling.css}" />
+</head>
+<body>
+<div class="container">
+	<br/>
+	<br/>
+	<br/>
+	<div class="span6 offset3 center">
+		<span class="alert alert-error" th:inline="text">
+			An error has occured: [[${errorMessage}]]
+		</span>
+		<br/><br/>
+		<a href="../home.html" th:href="@{/home.html}">Back to the application</a>
+	</div>
+    <script src="assets/js/jquery.js" th:src="@{/assets/js/jquery.js}"></script>
+    <script src="assets/js/bootstrap.js" th:src="@{/assets/js/bootstrap.js}"></script>
+    <script src="assets/js/springmvcexceptionhandling.js" th:src="@{/assets/js/springmvcexceptionhandling.js}"></script>
+</div>
+</body>
+</html>

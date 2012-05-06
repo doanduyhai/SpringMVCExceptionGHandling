@@ -1,0 +1,135 @@
+<!DOCTYPE html>
+<html xmlns="http://www.w3.org/1999/xhtml" 
+	  xmlns:th="http://www.thymeleaf.org">
+<head>
+	<link rel="stylesheet" href="../assets/css/bootstrap.css" th:href="@{/assets/css/bootstrap.css}" />
+	<link rel="stylesheet" href="../assets/css/springmvcexceptionhandling.css" th:href="@{/assets/css/springmvcexceptionhandling.css}" />
+</head>
+<body>
+<div class="container">
+	<br/>
+	<br/>
+	<br/>
+	<div id="messagePanel" style="display:none;" class="alert alert-error offset4 span4"></div>
+    <div class="offset2 span8 center">
+    	<h2>ExceptionHandlerExceptionResolver</h2>
+    	<br/>
+    	<table class="table table-striped table-bordered">
+    		<thead>
+    			<tr>
+    				<th class="center">Action</th>
+    				<th class="center">Scenario</th>
+    			</tr>
+    		</thead>
+    		<tbody>
+    			<tr>
+    				<td>
+    					<button type="button" class="btn btn-primary" onclick="exception1()">Exception 1</button>
+    				</td>
+    				<td>Plain HTML text message</td>
+    			</tr>
+    			<tr>
+    				<td>
+    					<form action="http/exception2">
+    						<button type="submit" class="btn btn-primary">Exception 2</button>
+    					</form>
+    				</td>
+    				<td>Custom error page</td>
+    			</tr>
+    			<tr>
+    				<td>
+    					<form action="http/exception3">
+    						<button type="submit" class="btn btn-primary">Exception 3</button>
+    					</form>
+    				</td>
+    				<td>Generic error page with error code and error message</td>
+    			</tr>
+				<tr>
+    				<td>
+    					<form action="http/exception4">
+    						<button type="submit" class="btn btn-primary">Exception 4</button>
+    					</form>
+    				</td>
+    				<td>Redirect to custom page with functional exception</td>
+    			</tr> 
+				<tr>
+    				<td>
+    					<button type="button" class="btn btn-primary" onclick="exception5()">Exception 5</button>
+    				</td>
+    				<td>Ajax request with Javascript error code handling</td>
+    			</tr>       			   	    			    			    			
+    		</tbody>
+    	</table>
+    	<br/>
+    	<h2>DefaultHandlerExceptionResolver</h2>
+    	<br/>
+    	<table class="table table-striped table-bordered">
+    		<thead>
+    			<tr>
+    				<th class="center">Action</th>
+    				<th class="center">Scenario</th>
+    			</tr>
+    		</thead>
+    		<tbody>
+    			<tr>
+    				<td>
+    					<form action="http/exception6">
+    						<button type="submit" class="btn btn-primary">Exception 6</button>
+    					</form>
+    				</td>
+    				<td>Test for DefaultHandlerExceptionResolver</td>
+    			</tr>
+    		</tbody>
+    	</table>
+		<br/>
+    	<h2>SimpleMappingExceptionResolver</h2>
+    	<br/>
+    	<table class="table table-striped table-bordered">
+    		<thead>
+    			<tr>
+    				<th class="center">Action</th>
+    				<th class="center">Scenario</th>
+    			</tr>
+    		</thead>
+    		<tbody>
+    			<tr>
+    				<td>
+    					<form action="http/exception7">
+    						<button type="submit" class="btn btn-primary">Exception 7</button>
+    					</form>
+    				</td>
+    				<td>ClassNotFoundException</td>
+    			</tr>
+    			<tr>
+    				<td>
+    					<form action="http/exception8">
+    						<button type="submit" class="btn btn-primary">Exception 8</button>
+    					</form>
+    				</td>
+    				<td>CloneNotSupportedException</td>
+    			</tr>    			
+    		</tbody>
+    	</table>    			
+	</div>
+    
+    
+	<div class="modal" id="errorModal" style="display: none;">
+	    <div class="modal-header center">
+		    <a class="close" data-dismiss="modal">&times;</a>
+		    <h3></h3>
+		</div>
+		<div class="modal-body">
+		    <p>
+		    	An error has occured in class <strong></strong>.<em></em> with the message :
+		    	<br/>
+		    	<br/> 
+		    	<span class="red center"></span>
+		    </p>
+		</div>
+	</div>	
+    <script src="assets/js/jquery.js" th:src="@{/assets/js/jquery.js}"></script>
+    <script src="assets/js/bootstrap.js" th:src="@{/assets/js/bootstrap.js}"></script>
+    <script src="assets/js/springmvcexceptionhandling.js" th:src="@{/assets/js/springmvcexceptionhandling.js}"></script>
+</div>
+</body>
+</html>
